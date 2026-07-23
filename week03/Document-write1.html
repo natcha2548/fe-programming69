@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<body>
+
+<h1 id="title">รายการผลไม้</h1>
+<ul>
+  <li class="fruit">แอปเปิล</li>
+  <li class="fruit">กล้วย</li>
+  <li class="fruit special">ทุเรียน</li>
+</ul>
+
+<script>
+// เลือกด้วย id เจาะจงตัวเดียว
+const title = document.getElementById("title");
+console.log(title.textContent);        // รายการผลไม้
+
+// เลือกด้วย CSS selector ยืดหยุ่นสุด แนะนำให้ใช้เป็นหลัก
+const firstFruit = document.querySelector(".fruit");
+console.log(firstFruit.textContent);   // แอปเปิล
+
+const special = document.querySelector("li.special");
+console.log(special.textContent);      // ทุเรียน
+
+// เลือกทุกตัว แล้ววนลูปได้ด้วย forEach
+const allFruits = document.querySelectorAll(".fruit");
+console.log(allFruits.length);         // 3
+allFruits.forEach(f => console.log(f.textContent));
+</script>
+
+</body>
+</html>
